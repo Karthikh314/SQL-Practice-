@@ -1,0 +1,54 @@
+SELECT - extracts data from a database
+syntax:
+SELECT column1, column2, ...
+FROM table_name;
+
+
+UPDATE - updates data in a database
+syntax:
+SELECT column1, column2, ...
+FROM table_name;
+
+
+DELETE - deletes data from a database
+syntax:
+DELETE FROM table_name WHERE condition;
+
+
+INSERT INTO - inserts new data into a database
+syntax:
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+CREATE DATABASE - creates a new database
+syntax:
+CREATE DATABASE databasename;
+
+
+CREATE TABLE - creates a new table
+syntax:
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+);
+
+ALTER TABLE - modifies a table
+syntax:
+ALTER TABLE table_name
+ADD column_name datatype;
+
+
+DROP TABLE - deletes a table
+syntax:
+DROP TABLE table_name;
+
+
+CREATE INDEX - creates an index (search key)
+syntax:
+CREATE INDEX index_name
+ON table_name (column1, column2, ...);
+
+DROP INDEX - deletes an index
+
