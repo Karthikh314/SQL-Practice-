@@ -1,0 +1,62 @@
+create database college;
+
+use college;
+
+create table student(
+rollno INT primary key , 
+name VARCHAR(50) ,
+marks int not null ,
+grade varchar(2) ,
+city varchar (50));  
+
+Insert into student values('101','karthik',91,'A','raichur'),
+						  (102,'sam',95,'A','Bangaluru'),
+                          (103,'som',78,'C','pune'),
+                          (104,'ram',84,'B','raichur'),
+                          (105,'kan',81,'B','pune'),
+                          (106,'rahu',12,'F','mumbai');
+
+
+
+select * from student where grade = 'A' and city='raichur';
+
+select * from student where marks >= 90 and city = 'raichur';
+
+select * from student where marks>90 or city = 'raichur';
+
+select * from student where grade = 'F' or marks >= 90;
+
+select * from student where name = 'karthik' and marks >= 80 or city = 'pune' ;
+
+select * from student where city = 'pune' and name  like 'k%';
+
+select * from student where marks >= 70 and city like 'r%';
+
+select * from student where marks >= 70 and name like 'r%' or name like 'k%' ;
+
+select * from student where grade between 'A' and 'B';
+
+select * from student where marks between 80 and 90;
+
+select * from student where city in('raichur' , 'pune');
+
+select * from student where rollno in (101,102,103);
+
+select * from student where city not in ('raichur');
+
+select * from student where grade not in ('F');
+
+select * from student where not city= 'pune';
+
+select * from student where not name like 'k%';
+
+select * from student where not city like 'B%';
+
+select * from student where marks not between 80 and  90 ;
+
+select * from student where rollno not between 101 and 104 ; 
+
+select * from student where not marks >=80; 
+
+select * from student where not marks <= 80;
+                          
