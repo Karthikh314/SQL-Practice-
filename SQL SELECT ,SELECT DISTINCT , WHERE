@@ -1,0 +1,32 @@
+create database college;
+
+use college;
+
+create table student(
+rollno INT primary key , 
+name VARCHAR(50) ,
+marks int not null ,
+grade varchar(2) ,
+city varchar (50));  
+
+Insert into student values('101','karthik',91,'A','raichur'),
+						  (102,'sam',95,'A','Bangaluru'),
+                          (103,'som',78,'C','pune'),
+                          (104,'ram',84,'B','raichur'),
+                          (105,'kan',81,'B','pune'),
+                          (106,'rahu',12,'F','mumbai');
+
+select * from student;
+
+select city from student;
+
+select rollno , name , city from student;
+
+select distinct city from student;
+
+select * from student where marks <= 80;
+
+select * from student where city='raichur';
+
+select * from student where marks >= 90 and city = 'raichur';
+                          
