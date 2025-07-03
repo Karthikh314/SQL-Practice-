@@ -1,0 +1,46 @@
+Orders (
+    OrderID INT,
+    CustomerID INT,
+    OrderDate DATE,
+    TotalAmount DECIMAL(10,2)
+)
+
+SELECT COUNT(*) AS TotalOrders
+FROM Orders;
+
+SELECT COUNT(DISTINCT CustomerID) AS UniqueCustomers
+FROM Orders;
+
+SELECT SUM(TotalAmount) AS TotalSales
+FROM Orders;
+
+SELECT CustomerID, SUM(TotalAmount) AS CustomerRevenue
+FROM Orders
+GROUP BY CustomerID;
+
+SELECT SUM(TotalAmount) AS DailyRevenue
+FROM Orders
+WHERE OrderDate = '2025-07-01';
+
+SELECT AVG(TotalAmount) AS AvgOrderValue
+FROM Orders;
+
+SELECT CustomerID, AVG(TotalAmount) AS AvgCustomerOrder
+FROM Orders
+GROUP BY CustomerID;
+
+SELECT OrderDate, AVG(TotalAmount) AS DailyAvgSales
+FROM Orders
+GROUP BY OrderDate;
+
+SELECT MIN(TotalAmount) AS SmallestOrder
+FROM Orders;
+
+SELECT MIN(OrderDate) AS FirstOrderDate
+FROM Orders;
+
+SELECT MAX(TotalAmount) AS LargestOrder
+FROM Orders;
+
+SELECT MAX(OrderDate) AS LastOrderDate
+FROM Orders;
