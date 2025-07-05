@@ -1,0 +1,29 @@
+select city,count(name) 
+from student
+group by city;
+
+select city , avg(marks)
+from student
+group by city;
+
+select city , avg(marks)
+from student
+group by city 
+order by avg(marks); 
+
+select grade,count(rollno)
+from student
+group by grade
+order by grade;  
+
+select city,count(name)
+from student
+group by city
+having max(marks)>=90;  
+
+select city , count(name)
+from student
+where grade = 'B'
+group by city
+having max(marks)>=82
+order by max(marks) desc;          
