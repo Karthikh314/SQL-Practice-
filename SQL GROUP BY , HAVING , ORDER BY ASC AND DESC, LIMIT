@@ -26,4 +26,15 @@ from student
 where grade = 'B'
 group by city
 having max(marks)>=82
-order by max(marks) desc;          
+order by max(marks) desc;
+
+SELECT  * from student
+limit 3;     
+
+SELECT * from student 
+where marks>=85
+ORDER BY marks
+LIMIT 2;  
+
+
+
