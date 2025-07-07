@@ -1,0 +1,46 @@
+CREATE DATABASE university;
+
+USE university;
+
+create table student(
+rollno INT primary key , 
+name VARCHAR(50) ,
+marks int not null ,
+grade varchar(2) ,
+city varchar (50)); 
+
+Insert into student values('101','karthik',91,'A','raichur'),
+						  (102,'sachin',95,'A','Bangaluru'),
+                          (103,'somu',78,'C','pune'),
+                          (104,'ram',84,'B','raichur'),
+                          (105,'karan',81,'B','pune'),
+                          (106,'rahul',12,'F','mumbai'),
+                          (107,'rohan',16,'F','mysuru');
+SELECT * FROM STUDENT;
+
+ALTER TABLE student
+ADD COLUMN age INT;
+
+ALTER TABLE student
+DROP column age;
+
+ALTER TABLE student
+ADD column age INT NOT NULL DEFAULT 19;
+
+ALTER TABLE student
+MODIFY column age VARCHAR(2);
+
+ALTER TABLE student
+CHANGE column age stud_age INT;
+
+ALTER TABLE student
+RENAME TO stu;
+
+SELECT * FROM stu;
+
+ALTER TABLE stu
+RENAME TO student;
+
+SELECT * FROM student;
+
+TRUNCATE table student; 
