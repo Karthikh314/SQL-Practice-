@@ -1,0 +1,47 @@
+CREATE DATABASE ABC;
+
+USE ABC;
+
+CREATE TABLE employee(id INT , emp_name VARCHAR(20));
+
+INSERT INTO employee VALUES
+(01,'karthik'),
+(02,'sachin'),
+(03,'rahul'),
+(04,'sohan');
+
+ALTER TABLE employee
+RENAME student;
+
+SELECT * FROM student;
+
+CREATE TABLE course(id INT , course VARCHAR(30),contactno INT);
+
+INSERT INTO course values
+(03,'science',94490888),
+(01,'social',97776666),
+(05,'chemistry',636335),
+(06,'maths',9888777),
+(07,'EVS',92929292);
+
+SELECT * FROM course;
+
+SELECT * FROM student
+INNER JOIN course
+ON student.id = course.id;
+
+SELECT * FROM student as s
+LEFT JOIN course as c
+ON s.id = c.id;
+
+SELECT * FROM student as a
+RIGHT JOIN course as b
+ON a.id = b.id;
+
+SELECT * FROM student as s
+LEFT JOIN course as c
+ON s.id = c.id 
+UNION 
+SELECT * FROM student as s
+RIGHT JOIN course as c
+ON s.id = c.id;
